@@ -1,0 +1,273 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1011927617238518}
+  m_IsPrefabParent: 1
+--- !u!1 &1011927617238518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224033908956763454}
+  - component: {fileID: 114456524200660966}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114456524200660966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1011927617238518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb7edb1acc4ba4429d231ca00ba1d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hand: []
+  Deck: []
+  Set: []
+  Discard: []
+  Caliber: []
+  All: []
+  Active: []
+  Standby: []
+  Defeated: []
+  PlayerLibrary:
+    cardLib:
+    - name: Rorshach's Complex
+      caliber: 3
+      defType: 2
+      defaultAmount: 5
+      cardType: 3
+      damage: 0
+      moveDistance: {x: 0, y: 0, z: 0}
+      isDirectionViable: 000000000000
+      actType: 3
+      costType: 3
+      costAmount: 6
+      cfxDurationType: 2
+      cfxDurationAmount: 2
+      cfxDescription: 
+    - name: Akashik Lambaste
+      caliber: 4
+      defType: 1
+      defaultAmount: 4
+      cardType: 3
+      damage: 0
+      moveDistance: {x: 0, y: 0, z: 0}
+      isDirectionViable: 000000000000
+      actType: 3
+      costType: 3
+      costAmount: 6
+      cfxDurationType: 1
+      cfxDurationAmount: 3
+      cfxDescription: 
+    - name: The Hanuman Armature
+      caliber: 4
+      defType: 1
+      defaultAmount: 5
+      cardType: 2
+      damage: 0
+      moveDistance: {x: 1, y: 4, z: 1}
+      isDirectionViable: 000001010001
+      actType: 0
+      costType: 0
+      costAmount: 0
+      cfxDurationType: 0
+      cfxDurationAmount: 0
+      cfxDescription: 
+    - name: Throne of Artorius
+      caliber: 4
+      defType: 0
+      defaultAmount: 4
+      cardType: 1
+      damage: 5
+      moveDistance: {x: 0, y: 0, z: 0}
+      isDirectionViable: 000000000000
+      actType: 0
+      costType: 0
+      costAmount: 0
+      cfxDurationType: 0
+      cfxDurationAmount: 0
+      cfxDescription: 
+    - name: Susano'o, The Glass Glaive
+      caliber: 3
+      defType: 2
+      defaultAmount: 4
+      cardType: 1
+      damage: 4
+      moveDistance: {x: 0, y: 0, z: 0}
+      isDirectionViable: 000000000000
+      actType: 0
+      costType: 0
+      costAmount: 0
+      cfxDurationType: 0
+      cfxDurationAmount: 0
+      cfxDescription: 
+    - name: Beyond the Isthmus
+      caliber: 3
+      defType: 0
+      defaultAmount: 5
+      cardType: 2
+      damage: 0
+      moveDistance: {x: 2, y: 1, z: 3}
+      isDirectionViable: 010100010000
+      actType: 0
+      costType: 0
+      costAmount: 0
+      cfxDurationType: 0
+      cfxDurationAmount: 0
+      cfxDescription: 
+    - name: Obsidian Rhapsody
+      caliber: 5
+      defType: 1
+      defaultAmount: 4
+      cardType: 1
+      damage: 3
+      moveDistance: {x: 0, y: 0, z: 0}
+      isDirectionViable: 000000000000
+      actType: 0
+      costType: 0
+      costAmount: 0
+      cfxDurationType: 0
+      cfxDurationAmount: 0
+      cfxDescription: 
+    - name: Fleeting Embers
+      caliber: 2
+      defType: 2
+      defaultAmount: 2
+      cardType: 3
+      damage: 0
+      moveDistance: {x: 0, y: 0, z: 0}
+      isDirectionViable: 000000000000
+      actType: 4
+      costType: 2
+      costAmount: 3
+      cfxDurationType: 2
+      cfxDurationAmount: 2
+      cfxDescription: 
+    - name: Fafnir's Dance
+      caliber: 2
+      defType: 0
+      defaultAmount: 3
+      cardType: 2
+      damage: 0
+      moveDistance: {x: 1, y: 1, z: 3}
+      isDirectionViable: 010000010001
+      actType: 0
+      costType: 0
+      costAmount: 0
+      cfxDurationType: 0
+      cfxDurationAmount: 0
+      cfxDescription: 
+    - name: Lance of Longinus
+      caliber: 3
+      defType: 1
+      defaultAmount: 5
+      cardType: 1
+      damage: 3
+      moveDistance: {x: 0, y: 0, z: 0}
+      isDirectionViable: 000000000000
+      actType: 0
+      costType: 0
+      costAmount: 0
+      cfxDurationType: 0
+      cfxDurationAmount: 0
+      cfxDescription: 
+    - name: Radiant Accel
+      caliber: 4
+      defType: 2
+      defaultAmount: 4
+      cardType: 1
+      damage: 3
+      moveDistance: {x: 0, y: 0, z: 0}
+      isDirectionViable: 000000000000
+      actType: 0
+      costType: 0
+      costAmount: 0
+      cfxDurationType: 0
+      cfxDurationAmount: 0
+      cfxDescription: 
+    archonLib:
+    - name: Artorius
+      maxHP: 9
+      currentHP: 0
+      rank: 1
+      currentXP: 0
+      nextXP: 0
+      maxXP: 0
+      Class: 4
+    - name: Susano'o
+      maxHP: 12
+      currentHP: 0
+      rank: 2
+      currentXP: 0
+      nextXP: 0
+      maxXP: 0
+      Class: 1
+    - name: Hermes
+      maxHP: 7
+      currentHP: 0
+      rank: 1
+      currentXP: 0
+      nextXP: 0
+      maxXP: 0
+      Class: 0
+    - name: Kresnik
+      maxHP: 15
+      currentHP: 0
+      rank: 3
+      currentXP: 0
+      nextXP: 0
+      maxXP: 0
+      Class: 2
+    - name: Lakshimi
+      maxHP: 10
+      currentHP: 0
+      rank: 2
+      currentXP: 0
+      nextXP: 0
+      maxXP: 0
+      Class: 3
+  ArchonObject: {fileID: 1832254864603652, guid: 1773ed5994ed7bf43b51ec0540d84bf6,
+    type: 2}
+  ArchonInstance: []
+  CardObject:
+  - {fileID: 0}
+  - {fileID: 1686881459050440, guid: 10ef826bf07bf78448a237e04b5a2f41, type: 2}
+  - {fileID: 1394671829062336, guid: ad97687e5004c07488694ac6ba743fdc, type: 2}
+  - {fileID: 1353242204202718, guid: 8ec28d3f35a23c444a500520c65ad49f, type: 2}
+  CardInstance: []
+--- !u!224 &224033908956763454
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1011927617238518}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
