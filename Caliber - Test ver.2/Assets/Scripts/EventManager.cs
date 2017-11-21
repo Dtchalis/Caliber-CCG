@@ -9,6 +9,11 @@ public class EventManager : MonoBehaviour
     private string currentPile;
     private bool AreCardsDisplayed;
 
+
+    public delegate void GameSetup();
+    public static event GameSetup OnInitField;
+    public static event GameSetup OnCreateField;
+
     public delegate void PlayerAction(GameObject _Target);
     public static event PlayerAction OnSet_Start;
     public static event PlayerAction OnDefault;
@@ -92,6 +97,15 @@ public class EventManager : MonoBehaviour
 
     }
 
+    //let's other members of the game know when the field is drawn
+    public static void CreateField()
+    {
+        if(OnInitField != null)
+        {
+            OnInitField();
+        }
+    }
+
     //doesn't need the gameobject being passed in, better way to impliment?
     public void PlayerDrawCard(GameObject _Player)
     {
@@ -150,6 +164,7 @@ public class EventManager : MonoBehaviour
 
     private void OnEnable()
     {
+        EventManager.OnInitField += CreateField;
         EventManager.OnDraw += DrawCards;
         EventManager.OnSet_Start += SetThisCard;
         EventManager.OnDefault += DefaultThisCard;
@@ -159,6 +174,7 @@ public class EventManager : MonoBehaviour
 
     private void OnDisable()
     {
+        EventManager.OnInitField -= CreateField;
         EventManager.OnDraw -= DrawCards;
         EventManager.OnSet_Start -= SetThisCard;
         EventManager.OnDefault -= DefaultThisCard;

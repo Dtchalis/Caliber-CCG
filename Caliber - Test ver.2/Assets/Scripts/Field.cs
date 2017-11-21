@@ -96,7 +96,6 @@ public class Field : MonoBehaviour
 
         EraseTiles();
 
-        
         //at some point --> write a function that takes the size of the field and rounds off the edges of the field. and fixes this^
     }
 

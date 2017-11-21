@@ -25,45 +25,7 @@ public class TileManager : MonoBehaviour {
 
         
 
-        for (int i = 0; i < 5; i++)
-        {
-            switch (i)
-            {
-                case 0:
-                    tx = 0;
-                    ty = 1;
-                    break;
-                case 1:
-                    tx = 1;
-                    ty = 0;
-                    break;
-                case 2:
-                    tx = 1;
-                    ty = -1;
-                    break;
-                case 3:
-                    tx = 0;
-                    ty = -1;
-                    break;
-                case 4:
-                    tx = -1;
-                    ty = 0;
-                    break;
-                case 5:
-                    tx = -1;
-                    ty = -1;
-                    break;
-            }
-
-            switch (Field.Map[(int)pos.x + tx, (int)pos.y + ty].tile == null)
-            {
-                case true:
-                    break;
-                case false:
-                    neighbours.Add(Field.Map[(int)pos.x + tx, (int)pos.y + ty].tile);
-                    break;
-            }
-        }
+        
 
         
 
@@ -101,6 +63,52 @@ public class TileManager : MonoBehaviour {
     {
         //EventManager.OnAttack -= setparams;
     }
+
+    private void setNeighbours()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            switch (i)
+            {
+                case 0:
+                    tx = 0;
+                    ty = 1;
+                    break;
+                case 1:
+                    tx = 1;
+                    ty = 0;
+                    break;
+                case 2:
+                    tx = 1;
+                    ty = -1;
+                    break;
+                case 3:
+                    tx = 0;
+                    ty = -1;
+                    break;
+                case 4:
+                    tx = -1;
+                    ty = 0;
+                    break;
+                case 5:
+                    tx = -1;
+                    ty = -1;
+                    break;
+            }
+
+            if (pos.x + tx >= 7 || pos.y + ty >= 7)
+            {
+                break;
+            }
+            else
+            {
+                neighbours.Add(Field.Map[(int)pos.x + tx, (int)pos.y + ty].tile);
+            }
+
+
+        }
+    }
+
 
     private void setparams(GameObject _Archon, GameObject _Card)
     {
